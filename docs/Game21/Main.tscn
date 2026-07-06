@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bc04jgq832nvc"]
+
+[ext_resource type="Script" uid="uid://bml21q6iedb32" path="res://Main.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dm5jrnxmxnuof" path="res://Ball.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://c2d4tqx4byjl1" path="res://wall.tscn" id="3_r0du0"]
+
+[node name="Main" type="Node" unique_id=1482853879]
+script = ExtResource("1")
+Ball = ExtResource("2")
+
+[node name="WallContainer" type="Node" parent="." unique_id=1874735797]
+
+[node name="Wall" parent="." unique_id=234663099 instance=ExtResource("3_r0du0")]

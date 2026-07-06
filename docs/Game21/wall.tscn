@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c2d4tqx4byjl1"]
+
+[ext_resource type="Texture2D" uid="uid://bu4x6fesst2a6" path="res://images__2_-removebg-preview.png" id="1_xxgf6"]
+[ext_resource type="Texture2D" uid="uid://dlfbk2cnn8gc7" path="res://pngtree-realities-blue-sky-with-white-cloud-background-image_339300.jpg" id="2_y4f30"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfxre"]
+size = Vector2(1152, 216)
+
+[node name="Wall" type="StaticBody2D" unique_id=234663099]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1021016539]
+position = Vector2(576, 460)
+scale = Vector2(3.1999998, 1.2666668)
+texture = ExtResource("1_xxgf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1783463887]
+position = Vector2(576, 540)
+shape = SubResource("RectangleShape2D_hfxre")
+
+[node name="PngtreeRealitiesBlueSkyWithWhiteCloudBackgroundImage339300" type="Sprite2D" parent="." unique_id=342571915]
+z_index = -2
+position = Vector2(576, 324)
+scale = Vector2(1.3379792, 1.6039605)
+texture = ExtResource("2_y4f30")

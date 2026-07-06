@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://kexlkihvhywi"]
+
+[ext_resource type="Script" uid="uid://dg1bkvxxmew3r" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bpqvt61o7ngx6" path="res://Gemini_Generated_Image_hd3ya3hd3ya3hd3y.png" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://3663gsbri4ea" path="res://char.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://gi7vmsosu56" path="res://mob.tscn" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://cqtiigej782at" path="res://Screenshot 2026-06-26 172240.png" id="4_lquwl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font_size = 80
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1bvp3"]
+font_size = 64
+
+[sub_resource type="Curve2D" id="Curve2D_lquwl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1152, 0, 0, 0, 0, 0, 1152, 648, 0, 0, 0, 0, 0, 648, 0, 0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[node name="Main" type="Node" unique_id=2053875244]
+script = ExtResource("1_1bvp3")
+mob_scene = ExtResource("3_lquwl")
+
+[node name="Char" parent="." unique_id=944591598 instance=ExtResource("2_1bvp3")]
+z_index = 1
+position = Vector2(576, 528)
+
+[node name="MobTimer" type="Timer" parent="." unique_id=1428557893]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="." unique_id=343945192]
+
+[node name="StartTimer" type="Timer" parent="." unique_id=1974671863]
+wait_time = 2.0
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=697915203]
+
+[node name="StartButton" type="Button" parent="CanvasLayer" unique_id=1805133509]
+offset_right = 1152.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0.9562109, 0.20743328, 1.92523e-07, 1)
+theme_override_font_sizes/font_size = 64
+text = "Start Game"
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer" unique_id=882313811]
+offset_left = 360.0
+offset_top = 296.0
+offset_right = 818.0
+offset_bottom = 406.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_lquwl")
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=99791857]
+offset_left = 8.0
+offset_top = 192.0
+offset_right = 48.0
+offset_bottom = 215.0
+label_settings = SubResource("LabelSettings_1bvp3")
+
+[node name="NAME" type="Sprite2D" parent="CanvasLayer" unique_id=1393576194]
+position = Vector2(192, 592)
+texture = ExtResource("4_lquwl")
+
+[node name="GeminiGeneratedImageHd3Ya3Hd3Ya3Hd3y" type="Sprite2D" parent="." unique_id=865420554]
+position = Vector2(576, 324)
+scale = Vector2(0.8240343, 0.84375)
+texture = ExtResource("1_h2yge")
+metadata/_edit_lock_ = true
+
+[node name="Mob" parent="." unique_id=1683248942 instance=ExtResource("3_lquwl")]
+z_index = 1
+position = Vector2(1240, 80)
+
+[node name="StartPosition" type="Marker2D" parent="." unique_id=864697228]
+position = Vector2(576, 520)
+
+[node name="MobPath" type="Path2D" parent="." unique_id=669330070]
+curve = SubResource("Curve2D_lquwl")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=2144904123]
+
+[connection signal="area_entered" from="Char" to="Char" method="_on_area_entered"]
+[connection signal="hit" from="Char" to="." method="_on_char_hit"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="body_entered" from="Mob" to="Mob" method="_on_body_entered"]
