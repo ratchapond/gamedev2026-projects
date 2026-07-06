@@ -3,126 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamedev 2026 - My Game Project</title>
+    <title>My Game Development Project 2026</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background: linear-gradient(135deg, #0e1017 0%, #1a1c24 100%);
-            color: #e2e8f0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh;
-            overflow: hidden;
-            position: relative;
+        /* สไตล์หลักสไตล์ Cyberpunk/Dark Mode */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        body::before {
-            content: "";
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0,183,255,0.1) 0%, rgba(0,0,0,0) 70%);
-            top: -10%;
-            right: -10%;
-            z-index: 0;
-        }
-        .container {
-            background: rgba(30, 41, 59, 0.7);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-            z-index: 1;
-        }
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #00dbde, #fc00ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
-        }
-        .student-info {
-            font-size: 14px;
-            color: #94a3b8;
-            margin-bottom: 35px;
-        }
-        ul { list-style: none; }
-        li { margin-bottom: 20px; }
-        .btn {
-            display: block;
-            padding: 16px 20px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 12px;
-            background: #242b35;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            transition: all 0.25s ease;
-        }
-        .btn-lab1:hover {
-            background: #0284c7;
-            box-shadow: 0 0 20px rgba(2, 132, 199, 0.6);
-            transform: translateY(-3px);
-        }
-        .btn-game21 { border: 1px solid rgba(168, 85, 247, 0.4); }
-        .btn-game21:hover { background: linear-gradient(135deg, #a855f7 0%, #d946ef 100%); box-shadow: 0 0 25px rgba(168, 85, 247, 0.7); transform: translateY(-3px); }
 
-        /* สีปุ่ม Game22 ธีมฟ้านีออน */
-        .btn-game22 { border: 1px solid rgba(0, 219, 222, 0.4); }
-<<<<<<< HEAD
-        .btn-game22:hover { background: linear-gradient(135deg, #00b7ff 0%, #00d2ff 100%); box-shadow: 0 0 25px rgba(0, 183, 255, 0.7); transform: translateY(-3px); color: #000; }
-=======
-        .btn-game22:hover { background: linear-gradient(135deg, #00b7ff 0%, #00d2ff 100%); box-shadow: 0 0 25px rgba(0, 183, 255, 0.7); transform: translateY(-3px); color: #000; };
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
         }
->>>>>>> b648edf6a4fb01cd49e4feb99765a108bd82f6b9
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        /* โซนแสดงการ์ดเกม */
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        /* สไตล์กล่องพอร์ทเกม */
+        .game-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.2);
+        }
+
+        /* พื้นที่ใส่รูปจำลองหัวการ์ด (ใช้สีไอคอนเท่ๆ ไปก่อน) */
+        .game-thumbnail {
+            height: 140px;
+            background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #f1f5f9;
+        }
+
+        .card-body p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .play-btn {
+            background-color: #38bdf8;
+            color: #0f172a;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .game-card:hover .play-btn {
+            background-color: #0ea5e9;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding-top: 3rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>🎮 GAMEDEV 2026 PROJECTS</h1>
-        <p class="student-info">คลังรวมส่งงานวิชาพัฒนาเกมด้วย Godot Engine</p>
-        
-        <ul>
-            <li>
-<<<<<<< HEAD
-                <a class="btn btn-lab1" href="./Lab01/index.html">🕹️ เข้าสู่ระบบเกม: Lab01 (Game 1)</a>
-            </li>
-            
-            <li>
-                <a class="btn btn-game21" href="./game21/index.html">👾 ผจญภัยด่านพิเศษ: Game21</a>
-            </li>
-            
-            <li>
-                <a class="btn btn-game22" href="./game22/index.html">⚔️ เข้าสู่สมรภูมิ: Game22 (ธีมกำลังภายใน)</a>
-            </li>
-        </ul>
-    </div>
+    <header>
+        <h1>🎮 Game Dev Portfolio</h1>
+        <p>รวมผลงานเกมและการทดลองจากคลาส Game Development</p>
+    </header>
+
+    <main class="container">
+
+        <a href="Game21/game21.html" class="game-card">
+            <div class="game-thumbnail">🃏</div>
+            <div class="card-body">
+                <h2>Game 21</h2>
+                <p>โปรเจกต์ย่อยชิ้นแรก พัฒนาด้วย Godot Engine ลองกดเข้ามาเล่นทดสอบระบบได้เลย</p>
+                <div class="play-btn">Launch Game</div>
+            </div>
+        </a>
+
+        <a href="Game22/" class="game-card">
+            <div class="game-thumbnail">🚀</div>
+            <div class="card-body">
+                <h2>Game 22</h2>
+                <p>โปรเจกต์ย่อยชิ้นที่สอง อัปเกรดระบบการเล่นและกราฟิกให้มีความท้าทายมากขึ้น</p>
+                <div class="play-btn">Launch Game</div>
+            </div>
+        </a>
+
+        <a href="Lab01/" class="game-card">
+            <div class="game-thumbnail">🧪</div>
+            <div class="card-body">
+                <h2>Lab 01</h2>
+                <p>งานทดลองระบบพื้นฐาน ฟิสิกส์ และการควบคุมตัวละครเบื้องต้น</p>
+                <div class="play-btn">View Lab</div>
+            </div>
+        </a>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Ratchapond. Powered by GitHub Pages</p>
+    </footer>
 
 </body>
 </html>
-=======
-                <a class="btn btn-lab1" href="./lab01.html">🕹️ เข้าสู่ระบบเกม: Lab01 (Game 1)</a>
-            </li>
-            
-            <li>
-                <a class="btn btn-game21" href="https://ratchapond.github.io/game21/" target="_blank">👾 ผจญภัยด่านพิเศษ: Game21</a>
-            </li>
-            
-            <li>
-                <a class="btn btn-game22" href="https://ratchapond.github.io/game22/" target="_blank">⚔️ เข้าสู่สมรภูมิ: Game22 (ธีมกำลังภายใน)</a>
-            </li>
-        </ul>
-
-</body>
-</html>
->>>>>>> b648edf6a4fb01cd49e4feb99765a108bd82f6b9
