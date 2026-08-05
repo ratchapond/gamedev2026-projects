@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bp4l1nlnh8oq1"]
+
+[ext_resource type="Texture2D" uid="uid://bqc44fixs8uks" path="res://fire_trap.png" id="1_qp3at"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hmxf"]
+radius = 19.0
+height = 210.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qddpi"]
+atlas = ExtResource("1_qp3at")
+region = Rect2(308, 0, 28, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jne72"]
+atlas = ExtResource("1_qp3at")
+region = Rect2(420, 0, 28, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7loc"]
+atlas = ExtResource("1_qp3at")
+region = Rect2(532, 0, 28, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toneo"]
+atlas = ExtResource("1_qp3at")
+region = Rect2(644, 0, 28, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap2os"]
+atlas = ExtResource("1_qp3at")
+region = Rect2(756, 0, 28, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7hkc"]
+atlas = ExtResource("1_qp3at")
+region = Rect2(868, 0, 28, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp1b7"]
+atlas = ExtResource("1_qp3at")
+region = Rect2(980, 0, 28, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmeho"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qddpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jne72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7loc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toneo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ap2os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7hkc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp1b7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Trap2" type="Node2D" unique_id=1894763376]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2111426041 groups=["Traps"]]
+position = Vector2(17.38456, 46.796585)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=426169161]
+position = Vector2(-18.38456, -50.796585)
+shape = SubResource("CapsuleShape2D_2hmxf")
+
+[node name="AnimationPlayer" type="AnimatedSprite2D" parent="." unique_id=199684831]
+position = Vector2(8, -17)
+scale = Vector2(3, 3.489)
+sprite_frames = SubResource("SpriteFrames_dmeho")
+autoplay = "default"
+frame_progress = 0.3608551

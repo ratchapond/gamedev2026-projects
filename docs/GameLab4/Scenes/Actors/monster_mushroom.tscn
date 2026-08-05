@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://b48s52q3f64kl"]
+
+[ext_resource type="PackedScene" uid="uid://d27bcsmx82vfa" path="res://Scenes/Actors/enemy.tscn" id="1_a4af2"]
+[ext_resource type="Script" uid="uid://bx5lotsye1r4s" path="res://Scenes/Actors/monster_small.gd" id="2_tyn28"]
+[ext_resource type="Texture2D" uid="uid://b58s4omj76jh3" path="res://Assets/Orge/0_Ogre_Walking_000.png" id="3_8g5y5"]
+[ext_resource type="Texture2D" uid="uid://cppgx3fquox2g" path="res://Assets/Orge/0_Ogre_Walking_002.png" id="4_qs8ce"]
+[ext_resource type="Texture2D" uid="uid://c8h54ev4qpell" path="res://Assets/Orge/0_Ogre_Walking_004.png" id="5_oxm22"]
+[ext_resource type="Texture2D" uid="uid://c0ft3ils13e8h" path="res://Assets/Orge/0_Ogre_Walking_006.png" id="6_lgsx7"]
+[ext_resource type="Texture2D" uid="uid://0am38vbw57t7" path="res://Assets/Orge/0_Ogre_Walking_008.png" id="7_1pjpm"]
+[ext_resource type="Texture2D" uid="uid://upt05dc2pf8p" path="res://Assets/Orge/0_Ogre_Walking_010.png" id="8_5x8hn"]
+[ext_resource type="Texture2D" uid="uid://bd7w4txx2of7d" path="res://Assets/Orge/0_Ogre_Walking_012.png" id="9_d1iqb"]
+[ext_resource type="Texture2D" uid="uid://dqtjt3u2bjd6i" path="res://Assets/Orge/0_Ogre_Walking_014.png" id="10_qnyj8"]
+[ext_resource type="Texture2D" uid="uid://c3awigl5apqe5" path="res://Assets/Orge/0_Ogre_Walking_016.png" id="11_3pdfo"]
+[ext_resource type="Texture2D" uid="uid://csy7stlbyq8l3" path="res://Assets/Orge/0_Ogre_Walking_018.png" id="12_po8nb"]
+[ext_resource type="Texture2D" uid="uid://beg7dvhr5mc4p" path="res://Assets/Orge/0_Ogre_Walking_020.png" id="13_83gpq"]
+[ext_resource type="Texture2D" uid="uid://b7fr1abjnhynp" path="res://Assets/Orge/0_Ogre_Walking_022.png" id="14_ge180"]
+[ext_resource type="AudioStream" uid="uid://cmu53btk66w7s" path="res://Scenes/Prefabs/Minecraft All Mobs Death Sounds.mp3" id="15_qs8ce"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7ctk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8g5y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qs8ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oxm22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lgsx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1pjpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5x8hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d1iqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qnyj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3pdfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_po8nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_83gpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ge180")
+}],
+"loop": 1,
+"name": &"mushroom",
+"speed": 10.0
+}]
+
+[node name="Enemy" unique_id=600502477 instance=ExtResource("1_a4af2")]
+script = ExtResource("2_tyn28")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=587424215]
+position = Vector2(0, -33)
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D2" parent="HitArea" parent_id_path=PackedInt32Array(1115411835) index="0" unique_id=2008793250]
+position = Vector2(0, -33)
+scale = Vector2(1.5, 1.5)
+
+[node name="AnimateSprite" type="AnimatedSprite2D" parent="Sprite" parent_id_path=PackedInt32Array(1445111960) index="0" unique_id=87960724]
+position = Vector2(0, -34.999996)
+scale = Vector2(0.10555556, 0.11111112)
+sprite_frames = SubResource("SpriteFrames_l7ctk")
+animation = &"mushroom"
+frame_progress = 0.7787452
+flip_h = true
+
+[node name="DeathSfx" parent="." index="4" unique_id=1907249660]
+stream = ExtResource("15_qs8ce")

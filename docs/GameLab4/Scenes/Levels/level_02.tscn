@@ -1,0 +1,128 @@
+[gd_scene format=4 uid="uid://cppg5yoxwv0dy"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_3fxa7"]
+[ext_resource type="PackedScene" uid="uid://towe6jtciome" path="res://Scenes/Levels/level_03.tscn" id="2_q8k1b"]
+[ext_resource type="TileSet" uid="uid://bvk6vx5i1riqd" path="res://Scenes/Prefabs/ground_tile_set.tres" id="3_f8isr"]
+[ext_resource type="PackedScene" uid="uid://cb8e62red7kc0" path="res://Scenes/Prefabs/trap_1.tscn" id="4_x41uu"]
+[ext_resource type="PackedScene" uid="uid://bp4l1nlnh8oq1" path="res://Scenes/Prefabs/trap_2.tscn" id="5_2uk4d"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="6_fwrqu"]
+[ext_resource type="PackedScene" uid="uid://ek7hxkqp2wff" path="res://Scenes/Actors/monster_slim.tscn" id="7_2uk4d"]
+[ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://Scenes/Prefabs/heal_potion.tscn" id="7_fwrqu"]
+[ext_resource type="PackedScene" uid="uid://b48s52q3f64kl" path="res://Scenes/Actors/monster_mushroom.tscn" id="8_fwrqu"]
+[ext_resource type="AudioStream" uid="uid://4nwxhl34pdl8" path="res://Scenes/Levels/Monkeys Spinning Monkeys Kevin MacLeod Background Music HD.mp3" id="10_bli80"]
+[ext_resource type="Texture2D" uid="uid://bi1tfnwy0ye6y" path="res://22.png" id="10_rrj2r"]
+[ext_resource type="Texture2D" uid="uid://cirylxt12lpp6" path="res://11.png" id="11_bli80"]
+[ext_resource type="Texture2D" uid="uid://dhfmwh5sli0j5" path="res://33.png" id="12_ekjuj"]
+[ext_resource type="Texture2D" uid="uid://e2ll3vuwxhdt" path="res://44.png" id="13_lgdv4"]
+[ext_resource type="Texture2D" uid="uid://3mnt2ms73lk1" path="res://55.png" id="14_3yipw"]
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_3fxa7")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1204, 398)
+next_scene = ExtResource("2_q8k1b")
+
+[node name="Background1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=1072429833]
+metadata/_edit_lock_ = true
+
+[node name="Background2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="1" unique_id=1070008654]
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="TileMapLayer" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=119075771]
+position = Vector2(43, 0)
+tile_map_data = PackedByteArray("AAD+/wAAAAAEAAEAAAD+/wEAAAAEAAEAAAD+/wIAAAAEAAEAAAD+/wMAAAAEAAEAAAD+/wQAAAAEAAEAAAD+/wUAAAAEAAEAAAD+/wYAAAAEAAEAAAD+/wcAAAAEAAEAAAD+/wgAAAAEAAEAAAD+/wkAAAAEAAEAAAD+/woAAAAEAAEAAAD+/w4AAAAEAAEAAAD+/w0AAAAEAAEAAAD+/wwAAAAEAAEAAAD+/wsAAAAEAAEAAAD//wYAAAAEAAAAAAAAAAYAAAAEAAAAAAABAAYAAAAEAAAAAAACAAYAAAAEAAAAAAD//wcAAAAEAAEAAAAAAAcAAAAEAAEAAAABAAcAAAAEAAEAAAACAAcAAAAEAAEAAAADAAYAAAAEAAAAAAADAAcAAAAEAAEAAAAFAAUAAAAEAAAAAAAGAAUAAAAEAAAAAAAHAAUAAAAEAAAAAAAFAAYAAAAEAAEAAAAGAAYAAAAEAAEAAAAHAAYAAAAEAAEAAAAKAAcAAAAEAAAAAAALAAcAAAAEAAAAAAAMAAcAAAAEAAAAAAAMAAgAAAAEAAEAAAALAAgAAAAEAAEAAAAKAAgAAAAEAAEAAAAPAAcAAAAEAAAAAAAQAAcAAAAEAAAAAAAPAAgAAAAEAAEAAAAQAAgAAAAEAAEAAAARAAcAAAAEAAAAAAARAAgAAAAEAAEAAAASAAgAAAAEAAEAAAATAAAAAAAEAAEAAAATAAEAAAAEAAEAAAATAAIAAAAEAAEAAAATAAMAAAAEAAEAAAATAAQAAAAEAAEAAAATAAUAAAAEAAEAAAATAAYAAAAEAAEAAAATAAcAAAAEAAEAAAATAAgAAAAEAAEAAAASAAcAAAAEAAAAAAAUAAcAAAAEAAEAAAAUAAgAAAAEAAEAAAAVAAgAAAAEAAEAAAAVAAcAAAAEAAEAAAAVAAYAAAAEAAEAAAAVAAUAAAAEAAEAAAAVAAQAAAAEAAEAAAAVAAMAAAAEAAEAAAAVAAIAAAAEAAEAAAAVAAEAAAAEAAEAAAAVAAAAAAAEAAEAAAAUAAAAAAAEAAEAAAAUAAEAAAAEAAEAAAAUAAIAAAAEAAEAAAAUAAMAAAAEAAEAAAAUAAQAAAAEAAEAAAAUAAUAAAAEAAEAAAAUAAYAAAAEAAEAAAAVAAkAAAAEAAEAAAAUAAkAAAAEAAEAAAATAAkAAAAEAAEAAAASAAkAAAAEAAEAAAARAAkAAAAEAAEAAAAQAAkAAAAEAAEAAAAPAAkAAAAEAAEAAAAMAAkAAAAEAAEAAAALAAkAAAAEAAEAAAAVAAoAAAAEAAEAAAAVAAsAAAAEAAEAAAAVAAwAAAAEAAEAAAAUAAwAAAAEAAEAAAATAAwAAAAEAAEAAAASAAwAAAAEAAEAAAARAAwAAAAEAAEAAAAQAAwAAAAEAAEAAAAPAAwAAAAEAAEAAAAMAAwAAAAEAAEAAAALAAwAAAAEAAEAAAAKAAwAAAAEAAEAAAAKAAsAAAAEAAEAAAAKAAoAAAAEAAEAAAAKAAkAAAAEAAEAAAALAAoAAAAEAAEAAAALAAsAAAAEAAEAAAAMAAoAAAAEAAEAAAAMAAsAAAAEAAEAAAAPAAsAAAAEAAEAAAAPAAoAAAAEAAEAAAAQAAoAAAAEAAEAAAARAAoAAAAEAAEAAAARAAsAAAAEAAEAAAASAAoAAAAEAAEAAAATAAoAAAAEAAEAAAATAAsAAAAEAAEAAAAUAAsAAAAEAAEAAAAUAAoAAAAEAAEAAAASAAsAAAAEAAEAAAAQAAsAAAAEAAEAAAAKAA0AAAAEAAEAAAAKAA4AAAAEAAEAAAALAA4AAAAEAAEAAAAMAA0AAAAEAAEAAAALAA0AAAAEAAEAAAAPAA0AAAAEAAEAAAAQAA0AAAAEAAEAAAARAA0AAAAEAAEAAAASAA0AAAAEAAEAAAATAA0AAAAEAAEAAAAUAA0AAAAEAAEAAAAVAA0AAAAEAAEAAAAVAA4AAAAEAAEAAAAUAA4AAAAEAAEAAAATAA4AAAAEAAEAAAASAA4AAAAEAAEAAAARAA4AAAAEAAEAAAAQAA4AAAAEAAEAAAAPAA4AAAAEAAEAAAAMAA4AAAAEAAEAAAAIAAUAAAAEAAAAAAAIAAYAAAAEAAEAAAA=")
+tile_set = ExtResource("3_f8isr")
+
+[node name="Trap" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=1930518021 instance=ExtResource("4_x41uu")]
+position = Vector2(658, 447)
+
+[node name="Trap2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=762872723 instance=ExtResource("4_x41uu")]
+position = Vector2(331, 381)
+
+[node name="Trap3" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=1894763376 instance=ExtResource("5_2uk4d")]
+position = Vector2(936, 516)
+rotation = 3.1468287
+
+[node name="Trap4" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="6" unique_id=850975200 instance=ExtResource("5_2uk4d")]
+position = Vector2(740, 119)
+
+[node name="Coin" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="0" unique_id=251510796 instance=ExtResource("6_fwrqu")]
+position = Vector2(485, 225)
+
+[node name="Coin2" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="1" unique_id=29111190 instance=ExtResource("6_fwrqu")]
+position = Vector2(354, 222)
+
+[node name="Coin3" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="2" unique_id=126181875 instance=ExtResource("6_fwrqu")]
+position = Vector2(671, 330)
+
+[node name="Coin4" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="3" unique_id=1648787759 instance=ExtResource("6_fwrqu")]
+position = Vector2(1012, 387)
+
+[node name="HealPotion" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="4" unique_id=242563240 instance=ExtResource("7_fwrqu")]
+position = Vector2(732, 419)
+
+[node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="0" unique_id=600502477 instance=ExtResource("7_2uk4d")]
+position = Vector2(569, 317)
+
+[node name="Enemy2" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="1" unique_id=1012046838 instance=ExtResource("8_fwrqu")]
+position = Vector2(417, 316)
+
+[node name="Enemy3" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="2" unique_id=996546822 instance=ExtResource("8_fwrqu")]
+position = Vector2(826, 450)
+
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
+text = "Level 2"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = ExtResource("10_bli80")
+
+[node name="Parallax2D" type="ParallaxBackground" parent="." index="8" unique_id=2104728782]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D" index="0" unique_id=125370256]
+motion_mirroring = Vector2(1648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer" index="0" unique_id=1630392438]
+position = Vector2(-496.00003, 0)
+scale = Vector2(2.8611112, 2)
+texture = ExtResource("10_rrj2r")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D" index="1" unique_id=735811057]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer2" index="0" unique_id=1662379727]
+position = Vector2(-496, 0)
+scale = Vector2(2.8611112, 2)
+texture = ExtResource("11_bli80")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax2D" index="2" unique_id=289319683]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer3" index="0" unique_id=1507643254]
+position = Vector2(-495.99997, 0)
+scale = Vector2(2.8611112, 2)
+texture = ExtResource("12_ekjuj")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Parallax2D" index="3" unique_id=1469764494]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer4" index="0" unique_id=1379319574]
+position = Vector2(-496, 0)
+scale = Vector2(2.8611112, 2)
+texture = ExtResource("13_lgdv4")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Parallax2D" index="4" unique_id=2060586036]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer5" index="0" unique_id=1656635301]
+position = Vector2(-496, 0)
+scale = Vector2(2.8611112, 2)
+texture = ExtResource("14_3yipw")
+centered = false

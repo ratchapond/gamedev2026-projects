@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://ek7hxkqp2wff"]
+
+[ext_resource type="PackedScene" uid="uid://d27bcsmx82vfa" path="res://Scenes/Actors/enemy.tscn" id="1_b7voo"]
+[ext_resource type="Script" uid="uid://bx5lotsye1r4s" path="res://Scenes/Actors/monster_small.gd" id="2_a8voy"]
+[ext_resource type="Texture2D" uid="uid://jubb0aetq2p6" path="res://Assets/Goblin/0_Goblin_Walking_000.png" id="3_i4d51"]
+[ext_resource type="Texture2D" uid="uid://cht3dsi3w6avn" path="res://Assets/Goblin/0_Goblin_Walking_002.png" id="4_4kvek"]
+[ext_resource type="Texture2D" uid="uid://c2tj2w7ssfa4h" path="res://Assets/Goblin/0_Goblin_Walking_004.png" id="5_l7t21"]
+[ext_resource type="Texture2D" uid="uid://xm51kpvsewsl" path="res://Assets/Goblin/0_Goblin_Walking_006.png" id="6_fx8d6"]
+[ext_resource type="Texture2D" uid="uid://bs7j56oybmr4h" path="res://Assets/Goblin/0_Goblin_Walking_008.png" id="7_06ehe"]
+[ext_resource type="Texture2D" uid="uid://def2vwkyr60j5" path="res://Assets/Goblin/0_Goblin_Walking_010.png" id="8_d55ix"]
+[ext_resource type="Texture2D" uid="uid://c3y1s8hv72p8c" path="res://Assets/Goblin/0_Goblin_Walking_012.png" id="9_jatlv"]
+[ext_resource type="Texture2D" uid="uid://c7hx5jcfvgwvq" path="res://Assets/Goblin/0_Goblin_Walking_014.png" id="10_bqauc"]
+[ext_resource type="Texture2D" uid="uid://b67e2xitay08y" path="res://Assets/Goblin/0_Goblin_Walking_016.png" id="11_4nc3x"]
+[ext_resource type="Texture2D" uid="uid://b5e2r06dqsfk3" path="res://Assets/Goblin/0_Goblin_Walking_018.png" id="12_ks7nl"]
+[ext_resource type="Texture2D" uid="uid://cpqsoti31u3db" path="res://Assets/Goblin/0_Goblin_Walking_020.png" id="13_gfo82"]
+[ext_resource type="Texture2D" uid="uid://bdnb4lbau6lr" path="res://Assets/Goblin/0_Goblin_Walking_022.png" id="14_cicv2"]
+[ext_resource type="AudioStream" uid="uid://cmu53btk66w7s" path="res://Scenes/Prefabs/Minecraft All Mobs Death Sounds.mp3" id="15_4kvek"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7ctk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_i4d51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4kvek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l7t21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fx8d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_06ehe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d55ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jatlv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bqauc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4nc3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ks7nl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gfo82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cicv2")
+}],
+"loop": 1,
+"name": &"slim",
+"speed": 10.0
+}]
+
+[node name="Enemy" unique_id=600502477 instance=ExtResource("1_b7voo")]
+script = ExtResource("2_a8voy")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=587424215]
+position = Vector2(0, -17)
+scale = Vector2(1, 0.8)
+
+[node name="CollisionShape2D2" parent="HitArea" parent_id_path=PackedInt32Array(1115411835) index="0" unique_id=2008793250]
+position = Vector2(0, -17)
+scale = Vector2(1, 0.8)
+
+[node name="Sprite" parent="." index="3" unique_id=1445111960]
+position = Vector2(0, -1)
+
+[node name="AnimateSprite" type="AnimatedSprite2D" parent="Sprite" index="0" unique_id=87960724]
+position = Vector2(0, -18)
+scale = Vector2(0.06666666, 0.06392361)
+sprite_frames = SubResource("SpriteFrames_l7ctk")
+animation = &"slim"
+frame_progress = 0.36457708
+flip_h = true
+
+[node name="AnimateSprite2" type="AnimatedSprite2D" parent="Sprite" index="1" unique_id=60076474]
+position = Vector2(0, -18)
+scale = Vector2(0.06666666, 0.06392361)
+sprite_frames = SubResource("SpriteFrames_l7ctk")
+animation = &"slim"
+frame_progress = 0.36457708
+flip_h = true
+
+[node name="Ray" parent="Sprite" index="2" unique_id=1415425330]
+visible = false
+
+[node name="DeathSfx" parent="." index="4" unique_id=1907249660]
+stream = ExtResource("15_4kvek")

@@ -1,0 +1,125 @@
+[gd_scene format=4 uid="uid://towe6jtciome"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_8r7r2"]
+[ext_resource type="PackedScene" uid="uid://darrnnrsriosd" path="res://Scenes/Levels/level_04.tscn" id="2_34g67"]
+[ext_resource type="TileSet" uid="uid://bvk6vx5i1riqd" path="res://Scenes/Prefabs/ground_tile_set.tres" id="3_pglxw"]
+[ext_resource type="PackedScene" uid="uid://cb8e62red7kc0" path="res://Scenes/Prefabs/trap_1.tscn" id="4_oi8m4"]
+[ext_resource type="PackedScene" uid="uid://b48s52q3f64kl" path="res://Scenes/Actors/monster_mushroom.tscn" id="4_seoo4"]
+[ext_resource type="PackedScene" uid="uid://bp4l1nlnh8oq1" path="res://Scenes/Prefabs/trap_2.tscn" id="5_hq1kd"]
+[ext_resource type="PackedScene" uid="uid://ek7hxkqp2wff" path="res://Scenes/Actors/monster_slim.tscn" id="5_t5fre"]
+[ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://Scenes/Prefabs/heal_potion.tscn" id="6_ifgmf"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="7_uak2l"]
+[ext_resource type="AudioStream" uid="uid://4nwxhl34pdl8" path="res://Scenes/Levels/Monkeys Spinning Monkeys Kevin MacLeod Background Music HD.mp3" id="10_5qict"]
+[ext_resource type="Texture2D" uid="uid://dottorntpmxwe" path="res://1111.png" id="10_34g67"]
+[ext_resource type="Texture2D" uid="uid://dwfie70606nar" path="res://2222.png" id="11_5qict"]
+[ext_resource type="Texture2D" uid="uid://ryytn7q2h8pq" path="res://3333.png" id="12_lshqn"]
+[ext_resource type="Texture2D" uid="uid://crnygqbnr8hs5" path="res://4444.png" id="13_0yyqy"]
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_8r7r2")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+next_scene = ExtResource("2_34g67")
+
+[node name="Ground" type="TileMapLayer" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1614578183]
+tile_map_data = PackedByteArray("AAD+/wAAAAADAAAAAAD+/wEAAAADAAAAAAD+/wIAAAADAAAAAAD+/wMAAAADAAAAAAD+/wQAAAADAAAAAAD+/wUAAAADAAAAAAD+/wYAAAADAAAAAAD+/wcAAAADAAAAAAD+/wgAAAADAAAAAAD+/wkAAAADAAAAAAD+/woAAAADAAAAAAD+/wsAAAADAAAAAAD+/wwAAAADAAAAAAD+/w0AAAADAAAAAAD+/w4AAAADAAAAAAD+/w8AAAADAAAAAAD//wkAAAADAAQAAAAAAAkAAAADAAQAAAABAAkAAAADAAQAAAACAAkAAAADAAQAAAADAAkAAAADAAQAAAD//wgAAAADAAMAAAAAAAgAAAADAAMAAAABAAgAAAADAAMAAAACAAgAAAADAAMAAAADAAgAAAADAAMAAAD//wcAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAADAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAADAAMAAAAIAAcAAAADAAMAAAAHAAcAAAADAAMAAAAIAAgAAAADAAQAAAAHAAgAAAADAAQAAAAGAAgAAAADAAQAAAAFAAgAAAADAAQAAAAJAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAAJAAYAAAADAAMAAAAKAAYAAAADAAMAAAAKAAcAAAADAAMAAAAJAAcAAAADAAMAAAAKAAgAAAADAAQAAAAJAAgAAAADAAQAAAAMAAYAAAAAAAAAAAANAAYAAAAAAAAAAAAOAAYAAAAAAAAAAAANAAcAAAADAAMAAAAOAAcAAAADAAMAAAAMAAcAAAADAAMAAAAMAAgAAAADAAQAAAANAAgAAAADAAQAAAAOAAgAAAADAAQAAAARAAUAAAAAAAAAAAASAAUAAAAAAAAAAAATAAUAAAAAAAAAAAAUAAUAAAAAAAAAAAAVAAYAAAAAAAAAAAAWAAcAAAAAAAAAAAAXAAcAAAAAAAAAAAAYAAcAAAAAAAAAAAAZAAcAAAAAAAAAAAAaAAcAAAAAAAAAAAAbAAcAAAADAAAAAAAbAAYAAAADAAAAAAAbAAUAAAADAAAAAAAbAAQAAAADAAAAAAAbAAMAAAADAAAAAAAbAAIAAAADAAAAAAAbAAEAAAADAAAAAAAbAAAAAAADAAAAAAAcAAAAAAADAAAAAAAcAAEAAAADAAAAAAAcAAIAAAADAAAAAAAcAAMAAAADAAAAAAAcAAQAAAADAAAAAAAcAAUAAAADAAAAAAAcAAYAAAADAAAAAAAcAAcAAAADAAAAAAAcAAgAAAADAAAAAAAbAAgAAAADAAAAAAAaAAgAAAADAAAAAAAZAAgAAAADAAAAAAAYAAgAAAADAAAAAAAXAAgAAAADAAAAAAAWAAgAAAADAAAAAAAVAAcAAAADAAAAAAAUAAYAAAADAAAAAAATAAYAAAADAAAAAAASAAYAAAADAAAAAAARAAYAAAADAAAAAAAUAAcAAAADAAAAAAATAAcAAAADAAAAAAASAAcAAAADAAAAAAARAAcAAAADAAAAAAARAAgAAAADAAAAAAASAAgAAAADAAAAAAATAAgAAAADAAAAAAAUAAgAAAADAAAAAAAVAAgAAAADAAAAAAAcAAkAAAADAAAAAAAbAAkAAAADAAAAAAAaAAkAAAADAAAAAAAZAAkAAAADAAAAAAAYAAkAAAADAAAAAAAXAAkAAAADAAAAAAAWAAkAAAADAAAAAAAVAAkAAAADAAAAAAAUAAkAAAADAAAAAAATAAkAAAADAAAAAAASAAkAAAADAAAAAAAcAAoAAAADAAAAAAAbAAoAAAADAAAAAAAaAAoAAAADAAAAAAAZAAoAAAADAAAAAAAYAAoAAAADAAAAAAAXAAoAAAADAAAAAAAWAAoAAAADAAAAAAAVAAoAAAADAAAAAAAUAAoAAAADAAAAAAATAAoAAAADAAAAAAASAAoAAAADAAAAAAARAAoAAAADAAAAAAARAAsAAAADAAAAAAASAAsAAAADAAAAAAATAAsAAAADAAAAAAAUAAsAAAADAAAAAAAVAAsAAAADAAAAAAAWAAsAAAADAAAAAAAXAAsAAAADAAAAAAAYAAsAAAADAAAAAAAZAAsAAAADAAAAAAAaAAsAAAADAAAAAAAbAAsAAAADAAAAAAAcAAsAAAADAAAAAAARAAkAAAADAAAAAAA=")
+tile_set = ExtResource("3_pglxw")
+
+[node name="Trap" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=1930518021 instance=ExtResource("4_oi8m4")]
+position = Vector2(1055, 403)
+
+[node name="Trap2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=1894763376 instance=ExtResource("5_hq1kd")]
+position = Vector2(737, 341)
+rotation = 3.1415927
+
+[node name="Trap3" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=560615185 instance=ExtResource("4_oi8m4")]
+position = Vector2(996, 402)
+
+[node name="Trap4" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="6" unique_id=967646131 instance=ExtResource("5_hq1kd")]
+position = Vector2(288, 496)
+rotation = 3.1415927
+
+[node name="HealPotion" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="0" unique_id=242563240 instance=ExtResource("6_ifgmf")]
+position = Vector2(814, 341)
+
+[node name="Coin" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="1" unique_id=251510796 instance=ExtResource("7_uak2l")]
+position = Vector2(1205, 242)
+
+[node name="Coin2" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="2" unique_id=152959933 instance=ExtResource("7_uak2l")]
+position = Vector2(917, 336)
+
+[node name="Coin3" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="3" unique_id=706346747 instance=ExtResource("7_uak2l")]
+position = Vector2(584, 210)
+
+[node name="Coin4" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="4" unique_id=1298881622 instance=ExtResource("7_uak2l")]
+position = Vector2(470, 272)
+
+[node name="Coin5" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="5" unique_id=402683360 instance=ExtResource("7_uak2l")]
+position = Vector2(356, 420)
+
+[node name="Coin6" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="6" unique_id=1945231128 instance=ExtResource("7_uak2l")]
+position = Vector2(356, 420)
+
+[node name="Enemy2" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="0" unique_id=600502477 instance=ExtResource("4_seoo4")]
+position = Vector2(1125, 315)
+
+[node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="1" unique_id=1777956225 instance=ExtResource("5_t5fre")]
+position = Vector2(1517, 443)
+
+[node name="Enemy5" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="2" unique_id=1053138761 instance=ExtResource("4_seoo4")]
+position = Vector2(861, 384)
+
+[node name="Enemy6" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="3" unique_id=812676212 instance=ExtResource("5_t5fre")]
+position = Vector2(563, 319)
+
+[node name="Enemy3" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="4" unique_id=400582802 instance=ExtResource("4_seoo4")]
+position = Vector2(672, 319)
+
+[node name="Enemy4" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="5" unique_id=573458385 instance=ExtResource("5_t5fre")]
+position = Vector2(430, 447)
+
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
+text = "Level 3"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = ExtResource("10_5qict")
+
+[node name="Parallax2D" type="ParallaxBackground" parent="." index="8" unique_id=718122065]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D" index="0" unique_id=1436332842]
+motion_mirroring = Vector2(1648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer" index="0" unique_id=897077869]
+position = Vector2(-496.00003, 0)
+scale = Vector2(2.8611112, 2)
+texture = ExtResource("10_34g67")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D" index="1" unique_id=389460378]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer2" index="0" unique_id=1951698642]
+position = Vector2(-496, 0)
+scale = Vector2(2.8611112, 2)
+texture = ExtResource("11_5qict")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax2D" index="2" unique_id=305823777]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer3" index="0" unique_id=1876514883]
+position = Vector2(-495.99997, 0)
+scale = Vector2(2.8611112, 2)
+texture = ExtResource("12_lshqn")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Parallax2D" index="3" unique_id=477780047]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer4" index="0" unique_id=1516443909]
+position = Vector2(-496, 0)
+scale = Vector2(2.8611112, 2)
+texture = ExtResource("13_0yyqy")
+centered = false
