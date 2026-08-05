@@ -9,7 +9,7 @@ This starter kit provides all the essential mechanics needed to build a complete
 
 <img src="docs/qrcode.png" style="width:300px;" />
 
-- [Game Preview](https://computingkku.github.io/2D-Platformer-Starter-Kit/)
+- [Game Preview]https://ratchapond.github.io/gamedev2026-projects/GameLab4/
 
 
 ## Features
