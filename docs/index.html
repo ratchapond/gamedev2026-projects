@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -12,168 +13,203 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
-            background-color: #0b0f19;
-            color: #f8fafc;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 3rem 1rem;
-        }
+```
+    body {
+        background-color: #0b0f19;
+        color: #f8fafc;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 1rem;
+    }
 
-        header {
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
+    header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
 
-        header h1 {
-            font-size: 2.8rem;
-            color: #d946ef;
-            text-shadow: 0 0 15px rgba(217, 70, 239, 0.4);
-            margin-bottom: 0.5rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
+    header h1 {
+        font-size: 2.8rem;
+        color: #d946ef;
+        text-shadow: 0 0 15px rgba(217, 70, 239, 0.4);
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
 
-        header p {
-            color: #64748b;
-            font-size: 1.1rem;
-        }
+    header p {
+        color: #64748b;
+        font-size: 1.1rem;
+    }
 
-        .container {
-            max-width: 1100px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 1rem;
-        }
+    .container {
+        max-width: 1100px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 1rem;
+    }
 
-        .game-card {
-            background: #111827;
-            border: 1px solid #1f2937;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-            color: inherit;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
+    .game-card {
+        background: #111827;
+        border: 1px solid #1f2937;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                    border-color 0.3s,
+                    box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
 
-        .game-card:hover {
-            transform: translateY(-8px);
-            border-color: #38bdf8;
-            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
-        }
+    .game-card:hover {
+        transform: translateY(-8px);
+        border-color: #38bdf8;
+        box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
+    }
 
-        .game-thumbnail {
-            height: 160px;
-            background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.5rem;
-            border-bottom: 1px solid #1f2937;
-            position: relative;
-        }
+    .game-thumbnail {
+        height: 160px;
+        background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.5rem;
+        border-bottom: 1px solid #1f2937;
+        position: relative;
+    }
 
-        .card-body {
-            padding: 1.75rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
+    .card-body {
+        padding: 1.75rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
 
-        .card-body h2 {
-            font-size: 1.4rem;
-            margin-bottom: 0.75rem;
-            color: #f1f5f9;
-            font-weight: 700;
-        }
+    .card-body h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+        color: #f1f5f9;
+        font-weight: 700;
+    }
 
-        .card-body p {
-            font-size: 0.95rem;
-            color: #94a3b8;
-            line-height: 1.6;
-            margin-bottom: 1.75rem;
-            flex-grow: 1;
-        }
+    .card-body p {
+        font-size: 0.95rem;
+        color: #94a3b8;
+        line-height: 1.6;
+        margin-bottom: 1.75rem;
+        flex-grow: 1;
+    }
 
-        .play-btn {
-            background-color: #38bdf8;
-            color: #0b0f19;
-            text-align: center;
-            padding: 0.85rem;
-            border-radius: 10px;
-            font-weight: 700;
-            transition: background-color 0.2s, transform 0.1s;
-        }
+    .play-btn {
+        background-color: #38bdf8;
+        color: #0b0f19;
+        text-align: center;
+        padding: 0.85rem;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: background-color 0.2s, transform 0.1s;
+    }
 
-        .game-card:hover .play-btn {
-            background-color: #0ea5e9;
-        }
+    .game-card:hover .play-btn {
+        background-color: #0ea5e9;
+    }
 
-        footer {
-            margin-top: auto;
-            padding-top: 4rem;
-            color: #475569;
-            font-size: 0.9rem;
-        }
-    </style>
+    footer {
+        margin-top: auto;
+        padding-top: 4rem;
+        color: #475569;
+        font-size: 0.9rem;
+    }
+</style>
+```
+
 </head>
+
 <body>
 
-    <header>
-        <h1>🎮 GAMEDEV 2026 PROJECTS</h1>
-        <p>คลังรวมส่งงานวิชาพัฒนาเกมด้วย Godot Engine</p>
-    </header>
+```
+<header>
+    <h1>🎮 GAMEDEV 2026 PROJECTS</h1>
+    <p>คลังรวมส่งงานวิชาพัฒนาเกมด้วย Godot Engine</p>
+</header>
 
-    <main class="container">
+<main class="container">
 
-        <a href="Lab01/" class="game-card">
-            <div class="game-thumbnail">🕹️</div>
-            <div class="card-body">
-                <h2>เข้าสู่ระบบเกม: Lab01 (Game 1)</h2>
-                <p>งานทดลองระบบฟิสิกส์ การควบคุมตัวละคร และพื้นฐานกลไกของตัวเกมชิ้นแรก</p>
-                <div class="play-btn">LAUNCH LAB</div>
-            </div>
-        </a>
+    <a href="Lab01/" class="game-card">
+        <div class="game-thumbnail">🕹️</div>
+        <div class="card-body">
+            <h2>เข้าสู่ระบบเกม: Lab01 (Game 1)</h2>
+            <p>
+                งานทดลองระบบฟิสิกส์ การควบคุมตัวละคร
+                และพื้นฐานกลไกของตัวเกมชิ้นแรก
+            </p>
+            <div class="play-btn">LAUNCH LAB</div>
+        </div>
+    </a>
 
-        <a href="Game21/" class="game-card">
-            <div class="game-thumbnail">👾</div>
-            <div class="card-body">
-                <h2>ผจญภัยด่านพิเศษ: Game21</h2>
-                <p>มินิเกมสุดท้าทายที่พัฒนาต่อยอดขึ้นมา ลองกดเข้ามาเล่นเพื่อทดสอบระบบและเก็บคะแนน</p>
-                <div class="play-btn">PLAY NOW</div>
-            </div>
-        </a>
+    <a href="Game21/" class="game-card">
+        <div class="game-thumbnail">👾</div>
+        <div class="card-body">
+            <h2>ผจญภัยด่านพิเศษ: Game21</h2>
+            <p>
+                มินิเกมสุดท้าทายที่พัฒนาต่อยอดขึ้นมา
+                ลองกดเข้ามาเล่นเพื่อทดสอบระบบและเก็บคะแนน
+            </p>
+            <div class="play-btn">PLAY NOW</div>
+        </div>
+    </a>
 
-        <a href="Game22/" class="game-card">
-            <div class="game-thumbnail">⚔️</div>
-            <div class="card-body">
-                <h2>เข้าสู่สมรภูมิ: Game22 (ธีมกำลังภายใน)</h2>
-                <p>โปรเจกต์เกมธีมกำลังภายในสุดเข้มข้น อัปเกรดทั้งกราฟิก เอฟเฟกต์ และความมันส์แบบจัดเต็ม</p>
-                <div class="play-btn">ENTER GAME</div>
-            </div>
-        </a>
+    <a href="Game22/" class="game-card">
+        <div class="game-thumbnail">⚔️</div>
+        <div class="card-body">
+            <h2>เข้าสู่สมรภูมิ: Game22 (ธีมกำลังภายใน)</h2>
+            <p>
+                โปรเจกต์เกมธีมกำลังภายในสุดเข้มข้น
+                อัปเกรดทั้งกราฟิก เอฟเฟกต์ และความมันส์แบบจัดเต็ม
+            </p>
+            <div class="play-btn">ENTER GAME</div>
+        </div>
+    </a>
 
-        <a href="GameLab4/" class="game-card">
-            <div class="game-thumbnail">🧙‍♂️</div>
-            <div class="card-body">
-                <h2>Wizard's Quest: GameLab4</h2>
-                <p>เกมผจญภัยแนว 2D Platformer ของนักเวท ใช้คทาเวทมนตร์ยิงบอลไฟสู้กับก๊อบลิน หลบกับดักเครื่องบดเพื่อผ่านด่าน</p>
-                <div class="play-btn">START QUEST</div>
-            </div>
-        </a>
+    <a href="GameLab4/" class="game-card">
+        <div class="game-thumbnail">🧙‍♂️</div>
+        <div class="card-body">
+            <h2>Wizard's Quest: GameLab4</h2>
+            <p>
+                เกมผจญภัยแนว 2D Platformer ของนักเวท
+                ใช้คทาเวทมนตร์ยิงบอลไฟสู้กับก๊อบลิน
+                หลบกับดักเครื่องบดเพื่อผ่านด่าน
+            </p>
+            <div class="play-btn">START QUEST</div>
+        </div>
+    </a>
 
-    </main>
+    <!-- Game41 -->
+    <a href="game41/" class="game-card">
+        <div class="game-thumbnail">🎮</div>
+        <div class="card-body">
+            <h2>MindBreak: Game41</h2>
+            <p>
+                เกมผจญภัยและต่อสู้ผ่านด่าน
+                เผชิญหน้ากับบอสและอุปสรรค
+                พร้อมระบบการโจมตี การเคลื่อนที่ และการเปลี่ยนฉาก
+            </p>
+            <div class="play-btn">PLAY GAME</div>
+        </div>
+    </a>
 
-    <footer>
-        <p>© 2026 Ratchapond. All Rights Reserved.</p>
-    </footer>
+</main>
+
+<footer>
+    <p>© 2026 Ratchapond. All Rights Reserved.</p>
+</footer>
+```
 
 </body>
 </html>
